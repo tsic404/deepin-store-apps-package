@@ -1,0 +1,18 @@
+{
+    "appid": "org.vim",
+    "name": "Gvim",
+    "version": "8.2.5136",
+    "arch": ["amd64"],
+    "permissions": {
+        "autostart": false,
+        "notification": false,
+        "trayicon": false,
+        "clipboard": false,
+        "account": false,
+        "bluetooth": false,
+        "camera": false,
+        "audio_record": false,
+        "installed_apps": false
+    }
+}
+

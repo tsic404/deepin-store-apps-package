@@ -1,0 +1,5 @@
+org.vim (8.2.5136-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Tsic <liuhenga@uniontech.com>  Mon, 20 Jun 2022 14:46:58 +0800

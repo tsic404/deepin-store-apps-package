@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	DH_COMPAT=10 dh_auto_configure -- \
+		--prefix=/opt/apps/org.vim/files/
+
+override_dh_auto_test:
+
+override_dh_installdocs:
+
+override_dh_installchangelogs:
+
+override_dh_installinfo:
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir debian/org.vim/opt/apps/org.vim/entries/
+	mv debian/org.vim/opt/apps/org.vim/files/share/applications debian/org.vim/opt/apps/org.vim/entries/
+	mv debian/org.vim/opt/apps/org.vim/files/share/icons debian/org.vim/opt/apps/org.vim/entries/
+	rm debian/org.vim/opt/apps/org.vim/entries/applications/vim.desktop
+	sed -i "s|Exec=gvim|Exec=/opt/apps/org.vim/files/bin/gvim|g" debian/org.vim/opt/apps/org.vim/entries/applications/gvim.desktop
+
+
